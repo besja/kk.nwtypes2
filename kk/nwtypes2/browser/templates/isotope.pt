@@ -41,6 +41,12 @@
   			return false;
 	
 	})
+	
+	$(".hover-block-inner").each(function(e) {
+		var h = $(this).parent().height();
+		var w = $(this).parent().width()
+		$(this).css({width:w+"px", height:h+"px"});
+	})
 
    });
 
@@ -55,15 +61,22 @@
   pointer-events: none;
   z-index: 1;
 } 
+
    </style>
 	<div id="isotope-container">
 		<tal:x tal:repeat="result results">
 		<div tal:define="obj result/getObject" 
-		  tal:attributes="class string:element ${obj/getProjectFilter}">
+		  tal:attributes="class string:element ${obj/getProjectFilter} hover-active" >
 			<a tal:attributes="href result/getURL">
 				<tal:x tal:content="structure python:obj.getProjectIcon('preview')"></tal:x>
 			</a>
 			<div class="underline"><a tal:attributes="href result/getURL" tal:content="result/Title"></a></div>
+			<div class="hover-block">
+				<div class="hover-block-inner">
+					<p tal:content="obj/Description"></p>
+					<a tal:attributes="href result/getURL">Read more...</a>
+				</div>
+			</div>
 		</div>
 		</tal:x>
 	</div>

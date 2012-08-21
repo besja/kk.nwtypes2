@@ -115,3 +115,29 @@ form.nwcontact label  {
 .contact-item .description {
 	margin: 0px 0px 15px 0px;
 }
+/** HOVER STYLES **/
+.hover-active {
+	position:relative;
+}
+.hover-block {
+    position:absolute;
+    z-index:100;
+    background-color:white;
+    border:1px red solid;
+    display:none;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    text-align:center;
+    vertical-align:middle;
+}
+.hover-active:hover .hover-block{
+	display:block;
+}
+.hover-block-inner {
+	vertical-align:middle;
+	display:table-cell;
+	border:1px green solid;
+}
+/** END HOVER STYLES **/
