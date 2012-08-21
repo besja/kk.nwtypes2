@@ -1,0 +1,6 @@
+<layers>
+ <layer
+     name="kk.nwtypes2"
+     interface="kk.nwtypes2.interfaces.IAddonInstalled"
+     />
+</layers>

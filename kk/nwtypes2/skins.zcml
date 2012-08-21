@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    i18n_domain="kk.nwtypes2">
+
+   <!-- File System Directory Views registration -->
+   <cmf:registerDirectory
+       name="kk_nwtypes2_images"/>
+   <cmf:registerDirectory
+       name="kk_nwtypes2_css"/>
+   <cmf:registerDirectory
+       name="kk_nwtypes2_js"/>
+   <cmf:registerDirectory
+       name="kk_nwtypes2_templates"/>
+</configure>
